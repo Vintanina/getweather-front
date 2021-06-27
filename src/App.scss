@@ -22,5 +22,13 @@ html,
 	&--rainy {
 		background: url(./Image/rainy-bg.jpg) center center no-repeat;
 		background-size: cover;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&--container {
+		background: #ddda;
+		width: 70%;
+		height: 60vh;
 	}
 }
