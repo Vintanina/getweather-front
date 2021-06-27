@@ -5,7 +5,8 @@ h2,
 h3,
 li,
 form,
-p {
+p,
+ul {
 	margin: 0;
 	padding: 0;
 }
@@ -18,7 +19,14 @@ html,
 	height: 100%;
 }
 
+ul {
+	list-style-type: none;
+}
+
 .app {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 	&--rainy {
 		background: url(./Image/rainy-bg.jpg) center center no-repeat;
 		background-size: cover;
@@ -26,9 +34,37 @@ html,
 		align-items: center;
 		justify-content: center;
 	}
-	&--container {
-		background: #ddda;
-		width: 70%;
-		height: 60vh;
+
+	&__weather {
+		font-size: 13pt;
+		color: white;
+	}
+
+	&__temperature {
+		font-size: 80pt;
+		color: white;
+		margin-bottom: 80px;
+		margin-top: 80px;
+	}
+
+	&__parameters,
+	&__icons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: white;
+		.item {
+			margin-left: 20px;
+			margin-right: 20px;
+			font-size: 25pt;
+			min-width: 57px;
+			text-align: center;
+		}
+	}
+
+	&__city {
+		color: white;
+		font-size: 13pt;
+		margin-top: 30px;
 	}
 }
